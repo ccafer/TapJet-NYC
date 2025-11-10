@@ -1,89 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabuloso Lavender - HH Maintenance</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .hero { background-color: #f4efff; }
-        .product-title { color: #5f259f; font-weight: bold; }
-        .product-subtitle { text-transform: uppercase; font-weight: bold; color: #5f259f; font-size: 0.9rem; }
-        .btn-purple { background-color: #5f259f; color: white; }
-        .btn-purple:hover { background-color: #4a1d7c; color: white; }
-        h4 { color: #5f259f; font-weight: bold; margin-top: 2rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fabuloso Lavender Multi-Purpose Cleaner | TapJet NYC - Wholesale Cleaning Supplies in New York City" />
+  <meta name="author" content="TapJet NYC" />
+  <title>Fabuloso Lavender - TapJet NYC</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .hero { background-color: #f8f5ff; }
+    .product-title { color: #5f259f; font-weight: 700; }
+    .product-subtitle { text-transform: uppercase; font-weight: 600; color: #5f259f; font-size: 0.9rem; letter-spacing: 0.5px; }
+    .btn-purple { background-color: #5f259f; color: #fff; }
+    .btn-purple:hover { background-color: #4a1d7c; color: #fff; }
+    h4 { color: #5f259f; font-weight: 700; margin-top: 2rem; }
+    footer { font-size: 0.9rem; }
+  </style>
 </head>
+
 <body>
-    <!-- Navbar (Updated) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">HH Maintenance</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                </ul>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand fw-bold brand-color" href="index.html" style="color:#5f259f;">TapJet NYC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="upload.html">Send Invoice</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Product Showcase -->
+  <section class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Product Image -->
+        <div class="col-md-6 text-center">
+          <img src="fabuloso.png" class="img-fluid rounded shadow-sm" alt="Fabuloso Lavender" style="max-height:450px;" />
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <img src="fabuloso.png" width="60" class="border p-1 rounded">
+            <img src="fabuloso.png" width="60" class="border p-1 rounded">
+            <img src="fabuloso.png" width="60" class="border p-1 rounded">
+          </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                    <img src="fabuloso.png" class="img-fluid" alt="Fabuloso Lavender" />
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <img src="fabuloso.png" width="60" class="border p-1">
-                        <img src="fabuloso.png" width="60" class="border p-1">
-                        <img src="fabuloso.png" width="60" class="border p-1">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="product-subtitle mb-2">Fabuloso® 2X Concentrated</div>
-                    <h1 class="product-title mb-3">Multi-Purpose Cleaner, Lavender Scent</h1>
-                    <ul>
-                        <li>2X concentrated formula with more active ingredients</li>
-                        <li>Multi-surface cleaner for floors, appliances, and more</li>
-                        <li>Fresh lavender scent with citrus and minty hints</li>
-                        <li>50% less plastic per use with dosing instructions</li>
-                    </ul>
-                    <p><strong>Sizes:</strong> 16.9oz, 28oz, 33.8oz, 56oz, 128oz, 169oz, 210oz</p>
-                    <a href="mailto:hhmaintenancellc@aol.com?subject=Order Request: Fabuloso Lavender" class="btn btn-purple btn-lg mt-3">Order via Email</a>
-                </div>
-            </div>
+        <!-- Product Details -->
+        <div class="col-md-6">
+          <div class="product-subtitle mb-2">Fabuloso® 2X Concentrated</div>
+          <h1 class="product-title mb-3">Multi-Purpose Cleaner — Lavender Scent</h1>
+
+          <ul class="mb-3">
+            <li>2X concentrated formula for deeper cleaning</li>
+            <li>Effective on floors, kitchens, appliances, and surfaces</li>
+            <li>Fresh lavender scent with subtle citrus and mint</li>
+            <li>Eco-friendly: 50% less plastic per use</li>
+          </ul>
+
+          <p><strong>Available Sizes:</strong> 16.9oz, 28oz, 33.8oz, 56oz, 128oz, 169oz, 210oz</p>
+
+          <a href="mailto:tapjetnyc@gmail.com?subject=Order Request: Fabuloso Lavender&body=Hello TapJet NYC,%0D%0AI'm interested in purchasing Fabuloso Lavender cleaner.%0D%0APlease provide me with pricing and bulk order details.%0D%0AThank you."
+             class="btn btn-purple btn-lg mt-3">
+            Order via Email
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Product Details Section -->
-    <section class="container py-5">
-        <h4>About</h4>
-        <p>Fabuloso Multi-Purpose Cleaner is the perfect solution for keeping your space clean and fresh. Its 2X concentrated formula and lavender scent create a welcoming atmosphere while providing superior cleaning performance for kitchens, bathrooms, and more.</p>
+  <!-- Product Details Section -->
+  <section class="container py-5">
+    <h4>About This Product</h4>
+    <p>
+      Fabuloso® Multi-Purpose Cleaner delivers a fresh lavender fragrance while cutting through grease and grime with ease. 
+      Ideal for commercial cleaning, restaurants, and facility maintenance — or everyday home use.
+    </p>
 
-        <h4>Clean surfaces and versatility</h4>
-        <p>Cuts through grease, grime, and dirt on multiple surfaces. Easy-pour bottle design makes it ideal for daily use across your home.</p>
+    <h4>Versatility & Cleaning Power</h4>
+    <p>
+      Designed for multi-surface use: tiles, floors, countertops, and appliances. 
+      Trusted for its reliable performance and long-lasting scent.
+    </p>
 
-        <h4>2X Concentrated formula</h4>
-        <p>Double the active ingredients for deeper cleaning. More uses per bottle. Eco-friendly with reduced plastic usage.</p>
+    <h4>2X Concentrated Formula</h4>
+    <p>
+      Each bottle is packed with double the cleaning agents, reducing plastic waste and improving cost efficiency for every gallon used.
+    </p>
 
-        <h4>Safety and Directions</h4>
-        <p>Mix 1/8 cup in a gallon of water or use directly on surfaces as needed. Always follow label instructions for safe use.</p>
-    </section>
+    <h4>Directions for Use</h4>
+    <p>
+      Mix 1/8 cup in a gallon of water for everyday cleaning, or use directly for stubborn spots. 
+      Always follow safety and label instructions for best results.
+    </p>
+  </section>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container text-center text-white">
-            <p class="m-0">&copy; HH Maintenance 2025</p>
-        </div>
-    </footer>
+  <!-- Call to Action -->
+  <section class="py-5 bg-light border-top">
+    <div class="container text-center">
+      <h3 class="fw-bold" style="color:#5f259f;">Looking for Better Pricing?</h3>
+      <p class="text-muted mb-4">Upload your supplier invoice and TapJet NYC will help you get the same products for less.</p>
+      <a href="upload.html" class="btn btn-purple btn-lg px-4">Upload Your Invoice</a>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white-50">
+    <div class="container text-center small">
+      © 2025 TapJet NYC — All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

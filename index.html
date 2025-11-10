@@ -1,97 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Welcome to HH Maintenance" />
-    <meta name="author" content="HH Maintenance" />
-    <title>Home - HH Maintenance</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="TapJet NYC - Wholesale Cleaning Supplies in New York" />
+  <meta name="author" content="TapJet NYC" />
+  <title>Home - TapJet NYC</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <style>
+    .brand-color { color: #5f259f; }
+    .btn-purple { background-color: #5f259f; color: #fff; }
+    .btn-purple:hover { background-color: #4a1d7c; color: #fff; }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">HH Maintenance</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand fw-bold brand-color" href="index.html">TapJet NYC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="upload.html">Send Invoice</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-light py-5">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center">
+        <h1 class="display-4 fw-bolder brand-color">Welcome to TapJet NYC</h1>
+        <p class="lead fw-normal text-muted mb-4">
+          Your local supplier for cleaning products, bulk deals, and unbeatable prices — serving businesses across NYC.
+        </p>
+        <a class="btn btn-purple btn-lg me-2" href="products.html">View Products</a>
+        <a class="btn btn-outline-dark btn-lg" href="upload.html">Send Your Invoice</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Products -->
+  <section class="py-5">
+    <div class="container px-4 px-lg-5">
+      <h2 class="fw-bolder mb-4 text-center brand-color">Featured Products</h2>
+      <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 justify-content-center">
+
+        <!-- Product 1 -->
+        <div class="col mb-5">
+          <a href="ItemWithDetails.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img class="card-img-top" src="fabuloso.png" alt="Fabuloso Cleaner" />
+              <div class="card-body p-4 text-center">
+                <h5 class="fw-bolder">Fabuloso® Lavender 56oz</h5>
+                <p class="text-muted small mb-0">All-purpose cleaner | 6/case</p>
+              </div>
             </div>
+          </a>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="bg-light py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center">
-                <h1 class="display-4 fw-bolder">Welcome to HH Maintenance!</h1>
-                <p class="lead fw-normal text-muted mb-4">Supplying high-quality cleaning products for over 15+ years</p>
-                <a class="btn btn-primary btn-lg me-2" href="products.html">View Products</a>
-                <a class="btn btn-outline-dark btn-lg" href="about.html">About Us</a>
+        <!-- Product 2 -->
+        <div class="col mb-5">
+          <a href="products.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img class="card-img-top" src="fabuloso.png" alt="Bulk Supplies" />
+              <div class="card-body p-4 text-center">
+                <h5 class="fw-bolder">Bulk Cleaning Essentials</h5>
+                <p class="text-muted small mb-0">Disinfectants, degreasers, and more</p>
+              </div>
             </div>
+          </a>
         </div>
-    </header>
 
-    <!-- Featured Products -->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5">
-            <h2 class="fw-bolder mb-4 text-center">Featured Products</h2>
-            <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 justify-content-center">
-
-                <!-- Product 1 -->
-                <div class="col mb-5">
-                    <a href="ItemWithDetails.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="fabuloso.png" alt="Product 1" />
-                            <div class="card-body p-4 text-center">
-                                <h5 class="fw-bolder">Product 1</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="col mb-5">
-                    <a href="ItemWithDetails.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="fabuloso.png" alt="Product 2" />
-                            <div class="card-body p-4 text-center">
-                                <h5 class="fw-bolder">Product 2</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="col mb-5">
-                    <a href="ItemWithDetails.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="fabuloso.png" alt="Product 3" />
-                            <div class="card-body p-4 text-center">
-                                <h5 class="fw-bolder">Product 3</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
+        <!-- Product 3 -->
+        <div class="col mb-5">
+          <a href="products.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img class="card-img-top" src="fabuloso.png" alt="Janitorial Supplies" />
+              <div class="card-body p-4 text-center">
+                <h5 class="fw-bolder">Janitorial & Paper Supplies</h5>
+                <p class="text-muted small mb-0">Everything you need to stay stocked</p>
+              </div>
             </div>
+          </a>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white">© HH Maintenance 2025</p></div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Call to Action -->
+  <section class="py-5 bg-light border-top">
+    <div class="container px-4 px-lg-5 text-center">
+      <h3 class="fw-bold brand-color mb-3">Save More with TapJet NYC</h3>
+      <p class="text-muted mb-4">
+        Upload your current supplier invoice and we’ll help you cut costs — same trusted brands, better prices.
+      </p>
+      <a href="upload.html" class="btn btn-purple btn-lg px-4">Upload Your Invoice</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white-50">
+    <div class="container text-center small">
+      © 2025 TapJet NYC — All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
