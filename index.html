@@ -2,121 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="TapJet NYC - Wholesale Cleaning Supplies in New York" />
-  <meta name="author" content="TapJet NYC" />
-  <title>Home - TapJet NYC</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TapJet NYC — Commercial Cleaning Supplies</title>
+  <meta name="description" content="TapJet NYC | Premium Cleaning Supply Distributor in New York" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
   <style>
-    .brand-color { color: #5f259f; }
-    .btn-purple { background-color: #5f259f; color: #fff; }
-    .btn-purple:hover { background-color: #4a1d7c; color: #fff; }
+    :root {
+      --purple: #5f259f;
+      --lavender: #cbb3ff;
+      --dark: #1a1a1a;
+      --gradient: linear-gradient(135deg, #6a2ee8, #4923a8, #854ef4);
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1rem 2rem;
+      z-index: 999;
+      transition: background 0.5s ease;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: var(--lavender); }
+
+    /* Animated Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: linear-gradient(-45deg, #6a2ee8, #4923a8, #854ef4, #5f259f);
+      background-size: 400% 400%;
+      animation: gradientFlow 10s ease infinite;
+    }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .hero h1 { font-size: 3.5rem; font-weight: 800; }
+    .tagline { font-size: 1.2rem; color: #e0d6ff; max-width: 600px; margin: 1rem auto 2rem; }
+    .btn-purple {
+      background-color: white;
+      color: var(--purple);
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-purple:hover { background-color: var(--lavender); color: white; }
+
+    /* Products */
+    .products {
+      padding: 6rem 1rem;
+      background-color: #fff;
+      text-align: center;
+    }
+    .product-card {
+      border: none;
+      background: #fafafa;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .product-card:hover { transform: translateY(-8px); }
+    .product-card img { border-radius: 16px 16px 0 0; }
+
+    /* How it works */
+    .how-it-works {
+      padding: 6rem 1rem;
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+    }
+
+    /* About */
+    .about {
+      padding: 6rem 1rem;
+      background-color: #f9f7ff;
+      color: #333;
+    }
+    .about h2 { color: var(--purple); font-weight: 700; }
+    .about p { max-width: 700px; margin: 0 auto 1rem; }
+
+    /* Contact */
+    .contact {
+      padding: 6rem 1rem;
+      background-color: #f8f5ff;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #aaa;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container px-4 px-lg-5">
-      <a class="navbar-brand fw-bold brand-color" href="index.html">TapJet NYC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="upload.html">Send Invoice</a></li>
-        </ul>
-      </div>
-    </div>
+  <!-- Navbar -->
+  <nav>
+    <a href="#hero" class="fw-bold">TapJet NYC</a>
+    <a href="#products">Products</a>
+    <a href="#how">How It Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Send Invoice</a>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="bg-light py-5">
-    <div class="container px-4 px-lg-5 my-5">
-      <div class="text-center">
-        <h1 class="display-4 fw-bolder brand-color">Welcome to TapJet NYC</h1>
-        <p class="lead fw-normal text-muted mb-4">
-          Your local supplier for cleaning products, bulk deals, and unbeatable prices — serving businesses across NYC.
-        </p>
-        <a class="btn btn-purple btn-lg me-2" href="products.html">View Products</a>
-        <a class="btn btn-outline-dark btn-lg" href="upload.html">Send Your Invoice</a>
-      </div>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div>
+      <h1>Save Big on Cleaning Supplies</h1>
+      <p class="tagline">TapJet NYC delivers premium commercial cleaning products to businesses across the five boroughs — faster, cheaper, smarter.</p>
+      <a href="#contact" class="btn btn-purple">Upload Your Invoice</a>
     </div>
-  </header>
+  </section>
 
-  <!-- Featured Products -->
-  <section class="py-5">
-    <div class="container px-4 px-lg-5">
-      <h2 class="fw-bolder mb-4 text-center brand-color">Featured Products</h2>
-      <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 justify-content-center">
-
-        <!-- Product 1 -->
-        <div class="col mb-5">
-          <a href="ItemWithDetails.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img class="card-img-top" src="fabuloso.png" alt="Fabuloso Cleaner" />
-              <div class="card-body p-4 text-center">
-                <h5 class="fw-bolder">Fabuloso® Lavender 56oz</h5>
-                <p class="text-muted small mb-0">All-purpose cleaner | 6/case</p>
-              </div>
-            </div>
-          </a>
+  <!-- Products -->
+  <section class="products" id="products">
+    <div class="container">
+      <h2 class="fw-bold mb-5" style="color:#5f259f;">Top Products</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3">
+          <div class="product-card p-3">
+            <img src="fabuloso.png" class="img-fluid mb-3" alt="Product 1">
+            <h5>Fabuloso® Lavender</h5>
+            <p class="text-muted">Multi-purpose cleaner</p>
+          </div>
         </div>
-
-        <!-- Product 2 -->
-        <div class="col mb-5">
-          <a href="products.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img class="card-img-top" src="fabuloso.png" alt="Bulk Supplies" />
-              <div class="card-body p-4 text-center">
-                <h5 class="fw-bolder">Bulk Cleaning Essentials</h5>
-                <p class="text-muted small mb-0">Disinfectants, degreasers, and more</p>
-              </div>
-            </div>
-          </a>
+        <div class="col-md-3">
+          <div class="product-card p-3">
+            <img src="fabuloso.png" class="img-fluid mb-3" alt="Product 2">
+            <h5>Lysol® Disinfectant</h5>
+            <p class="text-muted">Kills 99.9% of germs</p>
+          </div>
         </div>
-
-        <!-- Product 3 -->
-        <div class="col mb-5">
-          <a href="products.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img class="card-img-top" src="fabuloso.png" alt="Janitorial Supplies" />
-              <div class="card-body p-4 text-center">
-                <h5 class="fw-bolder">Janitorial & Paper Supplies</h5>
-                <p class="text-muted small mb-0">Everything you need to stay stocked</p>
-              </div>
-            </div>
-          </a>
+        <div class="col-md-3">
+          <div class="product-card p-3">
+            <img src="fabuloso.png" class="img-fluid mb-3" alt="Product 3">
+            <h5>Clorox® Professional</h5>
+            <p class="text-muted">Industrial strength bleach</p>
+          </div>
         </div>
-
+        <div class="col-md-3">
+          <div class="product-card p-3">
+            <img src="fabuloso.png" class="img-fluid mb-3" alt="Product 4">
+            <h5>Paper Towels (Bulk)</h5>
+            <p class="text-muted">2-ply, 12 rolls/case</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="py-5 bg-light border-top">
-    <div class="container px-4 px-lg-5 text-center">
-      <h3 class="fw-bold brand-color mb-3">Save More with TapJet NYC</h3>
-      <p class="text-muted mb-4">
-        Upload your current supplier invoice and we’ll help you cut costs — same trusted brands, better prices.
-      </p>
-      <a href="upload.html" class="btn btn-purple btn-lg px-4">Upload Your Invoice</a>
+  <!-- How It Works -->
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <h2 class="fw-bold mb-5">How It Works</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h4>1️⃣ Upload</h4>
+          <p>Send us your current invoice from your cleaning supplier.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>2️⃣ Compare</h4>
+          <p>We analyze your products and pricing line-by-line.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>3️⃣ Save</h4>
+          <p>We’ll send back a quote — same products, lower price.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container text-center">
+      <h2 class="mb-4">About TapJet NYC</h2>
+      <p><strong>TapJet NYC</strong> is a New York–based distributor specializing in wholesale and commercial cleaning products for restaurants, property managers, contractors, and offices across the five boroughs.</p>
+      <p>We partner with trusted brands — <strong>Fabuloso®, Lysol®, Clorox®, and Mr. Clean®</strong> — to deliver quality at unbeatable bulk prices.</p>
+      <p>Our mission is simple: help NYC businesses save money without sacrificing quality or reliability.</p>
+
+      <div class="mt-4">
+        <p><strong>Email:</strong> <a href="mailto:tapjetnyc@gmail.com" style="color:#5f259f;">tapjetnyc@gmail.com</a></p>
+        <p><strong>Phone:</strong> (347) 768-2459</p>
+        <p><strong>Service Area:</strong> NYC • Bronx • Queens • Brooklyn • Manhattan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color:#5f259f;">Send Your Invoice</h2>
+      <p class="mb-5">Let’s see how much you can save — upload your invoice below and we’ll review it within 24 hours.</p>
+
+      <form class="mx-auto" style="max-width:600px"
+            action="https://formsubmit.co/tapjetnyc@gmail.com"
+            method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <input type="text" name="Business Name" class="form-control" placeholder="Business Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" name="Email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="mb-3">
+          <input type="file" name="attachment" class="form-control" required>
+        </div>
+        <input type="hidden" name="_subject" value="New Invoice Submission - TapJet NYC">
+        <input type="hidden" name="_captcha" value="false">
+        <button class="btn btn-purple btn-lg mt-3">Submit Invoice</button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-4 bg-dark text-white-50">
-    <div class="container text-center small">
-      © 2025 TapJet NYC — All Rights Reserved
-    </div>
-  </footer>
+  <footer>© 2025 TapJet NYC — All Rights Reserved</footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".product-card").forEach((card, i) => {
+      gsap.from(card, {
+        scrollTrigger: { trigger: card, start: "top 85%" },
+        opacity: 0,
+        y: 50,
+        duration: 0.6,
+        delay: i * 0.1
+      });
+    });
+  </script>
 </body>
 </html>
